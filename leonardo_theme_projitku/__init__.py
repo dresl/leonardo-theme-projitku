@@ -1,10 +1,10 @@
 
 LEONARDO_APPS = [
-    'leonardo_theme_grayscale',
+    'leonardo_theme_projitku',
 ]
 
 LEONARDO_JS_FILES = [
-    'js/grayscale.js',
+    'js/projitku.js',
 ]
 
 LEONARDO_CSS_FILES = [
