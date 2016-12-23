@@ -10,8 +10,8 @@ body {
     width: 100%;
     height: 100%;
     font-family: $font-default;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
     overflow-y: scroll;
     padding: 0px!important;
 }
@@ -65,16 +65,26 @@ a {
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(white, 0.3);
-    text-transform: uppercase;
     font-family: $font-default;
     background-color: black;
+    .nav a.btn.btn-default {
+        padding: 3px 10px;
+        margin-top: 12px;
+        &:hover {
+            background-color: #567329;
+        }
+    }
     .navbar-toggle {
         padding: 4px 6px;
         font-size: 16px;
         color: white;
+        background-color: black;
         &:focus,
         &:active {
             outline: none;
+        }
+        .icon-bar {
+            background: white;
         }
     }
     .navbar-brand {
@@ -135,7 +145,6 @@ a {
 }
 
 .btn {
-    text-transform: uppercase;
     font-family: $font-default;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
@@ -146,14 +155,15 @@ a {
 
 .btn-default {
     border: 1px solid $primary;
-    color: $primary;
-    background-color: transparent;
+    color: black!important;
+    background-color: $primary;
+    margin: 0px 8px;
     &:hover,
     &:focus {
-        border: 1px solid $primary;
+        border: 1px solid #567329;
         outline: none;
         color: black;
-        background-color: $primary;
+        background-color: #567329;
     }
 }
 
@@ -174,8 +184,72 @@ ul.banner-social-buttons {
     }
 }
 
+.container.wrapper-box-blog {
+    background-color: #6e9434;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-preview-box {
+    background-color: gray;
+    height: 100%;
+    width: 32%;
+    padding: 7px;
+    margin: 5px;
+    margin-bottom: 10px;
+    float: left;
+}
+.leonardo-region {
+    form {
+        .form-group {
+            margin-bottom: 9px;
+        }
+        label {
+            display: none;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            border: none!important;
+            height: 34px;
+            text-align: center;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857;
+            font-weight: bold;
+            border-radius: 1px;
+            color: #1f1f1f;
+            background-color: #CCC;
+        }
+        ::-webkit-input-placeholder {
+           color: gray!important;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+           color: gray!important;
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+           color: gray!important;
+        }
+
+        :-ms-input-placeholder {  
+           color: gray!important;
+        }
+        textarea {
+            height: 170px!important;
+            resize: none;
+        }
+        .buttonHolder {
+            text-align: center;
+        }
+    }
+}
+
 footer {
+    background-color: #2398ff;
     padding: 50px 0;
+    display: block;
     p {
         margin: 0;
     }
@@ -201,74 +275,16 @@ img::-moz-selection {
     background: transparent;
 }
 
-body {
-    -webkit-tap-highlight-color: rgba(white, 0.2);
-}
-
 .modal-open .modal {
-    color: $black;
+    color: black;
 }
 
 .bg-map {
     padding: 0px;
 }
 
-.bg-gray {
-    color: black;
-    padding: 100px 0;
-    background-color: #BBBDC0;
-    background-image: url("/static/img/gray_bottom.png"), url("/static/img/gray_top.png");
-    background-position: bottom center, top center;
-    background-repeat: repeat-x, repeat-x;
-    .fa:before {
-        color: $white;
-    }
-    hr {
-        border-color: $white !important;
-    }
-    .widget-title, .section-heading {
-        color: $white;
-    }
-    h3 > a {
-      color: #fff;
-      &:hover, &:focus, &:active {
-        color: #fff;
-      }
-    }
-}
-
-.bg-headline1 {
-    color: $white;
-    &.parallax {
-        padding: 100px 0;
-        background-position: 0 0;
-        background-image: url("/static/img/polls_bg.jpg");
-    }
-}
-
-.bg-headline2 {
-    color: $white;
-    label {
-        color: $white;
-    }
-    &.parallax {
-        padding: 100px 0;
-        background-position: 0 0;
-        background-image: url("/static/img/bg-1.jpeg");
-    }
-}
-
-.bg-headline3 {
-    color: $white;
-    &.parallax {
-        padding: 100px 0;
-        background-position: 0 0;
-        background-image: url("/static/img/bg-2.jpg");
-    }
-}
-
 .bg-intro {
-    color: $white;
+    color: white;
     display: table;
     background-size: cover;
     width: 100%;

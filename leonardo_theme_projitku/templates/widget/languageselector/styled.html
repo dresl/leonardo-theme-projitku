@@ -1,0 +1,14 @@
+{% extends widget.get_base_template %}
+
+{% load i18n leonardo_page_tags %}
+
+{% block content %}
+{% feincms_languagelinks for page as links all,request=request %}
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+    {% for key, name, link in links %}
+        <li><a id="btn" class="btn btn-default" href="{% if link %}{{ link }}{% else %}/{{ key }}/{% endif %}">{{ name }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
