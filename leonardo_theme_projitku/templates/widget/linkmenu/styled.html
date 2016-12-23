@@ -1,0 +1,30 @@
+{% extends widget.get_base_template %}
+
+{% load i18n %}
+{% load thumbnail %}
+
+{% block content %}
+
+<style type="text/css">
+.ih-item.circle.effect19 .info h3 {
+    padding: 70px 0 0 0;
+}
+</style>
+
+<div class="container">
+{% for object in widget.list.link_set.all %}
+<div class="col-sm-4">
+    <div class="ih-item circle effect19 center-block">
+    <a href="{{ object.web_address }}">
+        <div class="img"><img src="{{ object.image.url }}" alt="img"></div>
+        <div class="info">
+          <h3>{{ object.translation.description|safe }}</h3>
+        </div>
+    </a>
+    </div>
+    <h3>{{ object }}</h3>
+</div>
+{% endfor %}
+</div>
+&nbsp;
+{% endblock %}

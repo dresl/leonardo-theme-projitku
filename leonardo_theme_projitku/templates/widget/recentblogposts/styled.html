@@ -3,16 +3,18 @@
 {% load i18n thumbnail feincms_tags %}
 
 {% block content %}
-
+&nbsp;
 <div class="container wrapper-box-blog">
 {% for item in widget.get_items %}
     {% if forloop.first %}
     <div class="col-xs-12 preview-box-inner">{% feincms_render_region item "preview" request %}</div>
     {% endif %}
+    <a href='{{ item.get_absolute_url }}'>
     <div class="blog-preview-box">
-        <div class="">{{ item.published_on|date:"j. m. Y" }}</div>
-        <h3><a href='{{ item.get_absolute_url }}'>{{ item.title }}</a></h3>
+        <p style="">{{ item.published_on|date:"j. m. Y" }}</p>
+        <h4>{{ item.title }}</h4>
     </div>
+    </a>
 {% endfor %}
 </div>
 

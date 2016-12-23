@@ -8,4 +8,5 @@ LEONARDO_JS_FILES = [
 ]
 
 LEONARDO_CSS_FILES = [
+    'css/ihover.css'
 ]

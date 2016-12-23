@@ -21,19 +21,6 @@ html {
     height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0 0 35px;
-    text-transform: uppercase;
-    font-family: $font-default;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
 p {
     margin: 0 0 25px;
     font-size: 18px;
@@ -60,6 +47,10 @@ a {
 
 .light {
     font-weight: 400;
+}
+
+h4 a {
+    color: white;
 }
 
 .navbar-custom {
@@ -193,12 +184,24 @@ ul.banner-social-buttons {
 .blog-preview-box {
     background-color: gray;
     height: 100%;
-    width: 32%;
+    width: 33%;
     padding: 7px;
-    margin: 5px;
+    border: 5px solid #6e9434;
     margin-bottom: 10px;
     float: left;
+    p {
+        font-size: 16px;
+        color: black;
+    }
+    h4 {
+        color: white;
+        transition: all 0.3s ease;
+    }
+    &:hover h4 {
+        color: #80b93b!important;
+    }
 }
+
 .leonardo-region {
     form {
         .form-group {
@@ -242,14 +245,37 @@ ul.banner-social-buttons {
         }
         .buttonHolder {
             text-align: center;
+            input#submit-id-submit {
+                text-align: center;
+                background-color: #bf2828;
+                border: 1px solid #bf2828;
+                padding: 8px 46px;
+            }
+        }
+        .buttonHolder input#submit-id-submit:hover {
+            background-color: #8a1a1a;
+            border: 1px solid #8a1a1a;
         }
     }
+}
+
+.bg-gray {
+    padding: 54px 0px;
+    background-color: #e8e8e8;
+}
+
+.bg-white {
+    padding: 54px 0px;
+    background-color: #ffffff;
 }
 
 footer {
     background-color: #2398ff;
     padding: 50px 0;
     display: block;
+    a {
+        color: #ffffff;
+    }
     p {
         margin: 0;
     }
