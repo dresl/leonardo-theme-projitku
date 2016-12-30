@@ -15,17 +15,18 @@
     </noscript>
     {% analytical_body_top %}
     {% include "horizon/_messages.html" %}
-    <nav id="mainNav" class="navbar navbar-custom navbar-fixed-top" role="navigation" style="{% if request.path != '/' %}background: #3a3a3a;{% endif %}">
+    <nav id="mainNav" class="navbar navbar-custom navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         {% feincms_render_region feincms_page "header" request %}
       </div>
     </nav>
-    {% if feincms_page.layout == "boxed" and request.path == "/" %}
-    <header class="bg-intro">
+    {% if feincms_page.layout == "boxed" %}
+    <header class="bg-intro {% if 'co-je-to-za-nemoc' in request.path %}cjtznmc{% elif 'o-jitce' in request.path %}ojitce{% elif 'dekujeme' in request.path %}dekujeme{% endif %}">
       <div class="intro-body">
         <div class="container">
           {% feincms_render_region feincms_page "toolbar" request %}
           {% render_region_tools feincms_page "toolbar" request %}
+          {% block body_main %}{% endblock %}
         </div>
       </div>
     </header>
@@ -41,7 +42,6 @@
       <section class="col3 {% get_col_classes feincms_page 'col3' %}">
           {% feincms_render_region feincms_page "col3" request %}
           {% render_region_tools feincms_page "col3" request %}
-        {% block body_main %}{% endblock %}
       </section>
       <!-- <section class="col2 {% get_col_classes feincms_page 'col2' %}">
         {% feincms_render_region feincms_page "col2" request %}

@@ -9,20 +9,31 @@
 .ih-item.circle.effect19 .info h3 {
     padding: 70px 0 0 0;
 }
+
+img.darken-img {
+   -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+   -o-transition: all 1s ease;
+   -ms-transition: all 1s ease;
+   transition: all 1s ease;
+}
+
+img.darken-img:hover {
+   -webkit-filter: brightness(50%);
+   filter: brightness(50%);
+}
+
 </style>
 
 <div class="container">
 {% for object in widget.list.link_set.all %}
 <div class="col-sm-4">
-    <div class="ih-item circle effect19 center-block">
-    <a href="{{ object.web_address }}">
-        <div class="img"><img src="{{ object.image.url }}" alt="img"></div>
-        <div class="info">
-          <h3>{{ object.translation.description|safe }}</h3>
-        </div>
+    <div class="">
+    <a href="{{ object.web_address }}" class="darken-img">
+        <img style="width: 205px;" src="{{ object.image.url }}" alt="img" class="darken-img">
+        <h3>{{ object }}</h3>
     </a>
     </div>
-    <h3>{{ object }}</h3>
 </div>
 {% endfor %}
 </div>

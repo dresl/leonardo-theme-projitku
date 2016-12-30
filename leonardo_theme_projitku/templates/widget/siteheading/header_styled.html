@@ -1,0 +1,11 @@
+{% extends widget.get_base_template %}
+{% load staticfiles %}
+
+{% block content %}
+<div style="padding-top: 8px;">
+<a href="/">
+<p class="heading-header">{{ widget.site_title }}</p>
+<img class="image-header" src="{% static 'img/500x500px_logo.png' %}">
+</a>
+</div>
+{% endblock %}
