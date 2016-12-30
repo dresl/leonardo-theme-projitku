@@ -120,6 +120,7 @@ h4 a {
     }
     a {
         color: white;
+        font-weight: bold;
     }
     .nav {
         li {
@@ -296,6 +297,10 @@ ul.banner-social-buttons {
 .bg-gray {
     padding: 54px 0px;
     background-color: #e8e8e8;
+    background-image: url('/static/img/pomoc_panacek.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 215px;
 }
 
 .bg-white {

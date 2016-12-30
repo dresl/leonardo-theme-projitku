@@ -4,15 +4,22 @@
 
 {% block content %}
 &nbsp;
-<div class="container wrapper-box-blog">
+<hr>
+&nbsp;
+
+<div class="row">
 {% for item in widget.get_items %}
     {% if forloop.first %}
     <div class="col-xs-12 preview-box-inner">{% feincms_render_region item "preview" request %}</div>
     {% endif %}
     <a href='{{ item.get_absolute_url }}'>
-    <div class="blog-preview-box">
-        <p style="">{{ item.published_on|date:"j. m. Y" }}</p>
-        <h4>{{ item.title }}</h4>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <div class="caption">
+                <p style="">{{ item.published_on|date:"j. m. Y" }}</p>
+                <h4 style="color: black">{{ item.title }}</h4>
+            </div>
+        </div>
     </div>
     </a>
 {% endfor %}

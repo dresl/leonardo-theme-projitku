@@ -4,15 +4,15 @@
 {% block content %}
 <div class="container" style="margin: 0;padding: 0;">
 <div class="col-md-3 col-md-offset-9" style="background-color: white;padding: 0;">
-    <img class="toolbar-image" src="{% static 'img/500x500px_jitka.png' %}" style="width: 175px">
+    <img class="toolbar-image" src="{% static 'img/500x500px_jitka.png' %}" style="width: 175px;padding-bottom: 40px;">
 </div>
 </div>
 <div class="container" style="background-color: rgba(255, 255, 255, 0.5);padding: 0;">
 <div class="col-md-9" style="text-align: left;">
-    <h3 style="color: black" class="">{{ widget.tagline }}</h3>
+    <h3 style="color: black" class="">{{ widget.tagline|safe }}</h3>
 </div>
-<div class="col-md-3" style="background-color: white">
-    <h1 class="toolbar-heading" style="color: #cc4c56;">{{ widget.site_title }}</h1>
+<div class="col-md-3" style="background-color: white;text-align: left">
+    <h1 class="toolbar-heading" style="color: #cc4c56;padding-left: 46px;">{{ widget.site_title|safe }}</h1>
 </div>
 </div>
 
