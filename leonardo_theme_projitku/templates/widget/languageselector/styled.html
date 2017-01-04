@@ -1,13 +1,15 @@
 {% extends widget.get_base_template %}
 
-{% load i18n leonardo_page_tags %}
+{% load i18n leonardo_page_tags staticfiles %}
 
 {% block content %}
 {% feincms_languagelinks for page as links all,request=request %}
 <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
+    {% static 'img/cze-01.png' as cze_png %}
+    {% static 'img/gb-01.png' as gb_png %}
     {% for key, name, link in links %}
-        <li><a id="btn" class="btn btn-default" href="{% if link %}{{ link }}{% else %}/{{ key }}/{% endif %}">{{ name }}</a></li>
+        <li><a id="btn" href="{% if link %}{{ link }}{% else %}/{{ key }}/{% endif %}"><img style="width: 28px;" src="{% if key == 'cs' %}{{ cze_png }}{% elif key == 'en' %}{{ gb_png }}{% endif %}"></a></li>
     {% endfor %}
     </ul>
 </div>
