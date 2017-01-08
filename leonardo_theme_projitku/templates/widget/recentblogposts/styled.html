@@ -10,7 +10,9 @@
 <div class="row">
 {% for item in widget.get_items %}
     {% if forloop.first %}
+    <div class="container">
     <div class="col-xs-12 preview-box-inner">{% feincms_render_region item "preview" request %}</div>
+    </div>
     {% endif %}
     <a href='{{ item.get_absolute_url }}'>
     <div class="col-sm-6 col-md-4">

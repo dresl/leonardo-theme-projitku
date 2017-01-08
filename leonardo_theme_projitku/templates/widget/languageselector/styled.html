@@ -8,8 +8,8 @@
     <ul class="nav navbar-nav">
     {% static 'img/cze-01.png' as cze_png %}
     {% static 'img/gb-01.png' as gb_png %}
-    {% for key, name, link in links %}
-        <li><a id="btn" href="{% if link %}{{ link }}{% else %}/{{ key }}/{% endif %}"><img style="width: 28px;" src="{% if key == 'cs' %}{{ cze_png }}{% elif key == 'en' %}{{ gb_png }}{% endif %}"></a></li>
+    {% for key, name, link in links reversed %}
+        <li><a id="btn" href="{% if link %}{{ link }}{% else %}/{{ key }}/{% endif %}"><img style="width: 40px; margin-top: -2px;" src="{% if key == 'cs' %}{{ cze_png }}{% elif key == 'en' %}{{ gb_png }}{% endif %}"></a></li>
     {% endfor %}
     </ul>
 </div>
