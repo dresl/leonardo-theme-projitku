@@ -55,7 +55,7 @@ a {
 }
 
 .toolbar-image-projitku {
-    width: 260px;
+    width: 280px;
 }
 
 .toolbar-heading {
@@ -75,7 +75,7 @@ a {
     width: 38px;
 }
 
-.entry-title a {
+.entry-title, .entry-title a {
     color: white;
 }
 
@@ -187,16 +187,17 @@ h4 a {
 }
 
 .btn-default {
-    border: 1px solid $primary;
-    color: black!important;
-    background-color: $primary;
+    border: 1px solid #909090;
+    color: black !important;
+    background-color: #ffffff;
     margin: 0px 8px;
+    border-radius: 3px;
     &:hover,
     &:focus {
-        border: 1px solid #567329;
+        border: 1px solid #828282;
         outline: none;
         color: black;
-        background-color: #567329;
+        background-color: #eaeaea;
     }
 }
 
@@ -223,6 +224,18 @@ ul.banner-social-buttons {
             }
         }
     }
+}
+
+.carousel-indicators li {
+    border: 1px solid #db1646;
+}
+
+.carousel-indicators .active {
+    background-color: #db1646;
+}
+
+.carousel-control .fa {
+    color: #db1646;
 }
 
 .container.wrapper-box-blog {
@@ -423,5 +436,18 @@ div.section-heading:hover {
     }
     .toolbar-image {
         width: 200px;
+    }
+    .image-header {
+        width: 18px;
+    }
+    .heading-header {
+        color: white;
+        padding-right: 20px;
+        float: left;
+        font-size: 9px;
+        margin: 0;
+    }
+    .image-header {
+        width: 24px;
     }
 }

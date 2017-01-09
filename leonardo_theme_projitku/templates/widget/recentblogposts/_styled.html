@@ -1,0 +1,8 @@
+{% load i18n feincms_tags %}
+
+<div class="object-text">
+    <h3><a href='{{ item.get_absolute_url }}' style="color: #db1646;">{{ item.title }}</a></h3>
+    <div class="object-meta">{{ item.published_on|date:"j. m. Y" }}</div>
+    {% feincms_render_region item "preview" request %}
+    <a href="{{ item.get_absolute_url }}" class="btn btn-default">Číst více</a>
+</div>
