@@ -425,19 +425,6 @@ div.section-heading:hover {
     }
 }
 
-/* smartphones */
-@media only screen and (max-width: 760px) {
-    .toolbar-image-projitku {
-        width: 150px;
-    }
-    .toolbar-image {
-        width: 200px;
-    }
-    .img-responsive.image-header {
-        margin-top: 12px!important;
-    }
-}
-
 .navbar-collapse {
     box-shadow: none;
 }
@@ -450,4 +437,28 @@ div.section-heading:hover {
 .hentry {
     background-color: rgba(0, 0, 0, 0.51);
     padding: 40px;
+}
+
+/* smartphones */
+@media only screen and (max-width: 760px) {
+    .toolbar-image-projitku {
+        width: 130px;
+    }
+    .toolbar-image {
+        width: 200px;
+    }
+    .img-responsive.image-header {
+        margin-top: 12px!important;
+    }
+    .toolbar-heading {
+        font-family: Gadugib;
+        color: white;
+        font-size: 35px;
+    }
+    .toolbar-text {
+        margin-top: -33px!important;
+    }
+    .image-ojitce {
+        width: 70px!important;
+    }
 }
