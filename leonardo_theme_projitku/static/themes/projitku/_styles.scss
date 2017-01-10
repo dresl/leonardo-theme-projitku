@@ -71,10 +71,6 @@ a {
     font-size: 60px;
 }
 
-.image-header {
-    width: 38px;
-}
-
 .entry-title, .entry-title a {
     color: white;
 }
@@ -437,17 +433,21 @@ div.section-heading:hover {
     .toolbar-image {
         width: 200px;
     }
-    .image-header {
-        width: 18px;
+    .img-responsive.image-header {
+        margin-top: 12px!important;
     }
-    .heading-header {
-        color: white;
-        padding-right: 20px;
-        float: left;
-        font-size: 9px;
-        margin: 0;
-    }
-    .image-header {
-        width: 24px;
-    }
+}
+
+.navbar-collapse {
+    box-shadow: none;
+}
+
+.navbar-custom .navbar-toggle {
+    padding: 8px 6px;
+    background-color: transparent;
+}
+
+.hentry {
+    background-color: rgba(0, 0, 0, 0.51);
+    padding: 40px;
 }
