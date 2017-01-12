@@ -1,0 +1,54 @@
+{% extends widget.get_base_template %}
+{% load i18n thumbnail %}
+
+{% block content %}
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style type="text/css">
+  .demo {
+    cursor: pointer;
+  }
+</style>
+<hr>
+<div class="container">
+{% for object in widget.folder.files %}
+  <img class="mySlides" src='/media/{{ object.file }}' style="width:350px; margin: 0 auto"/>
+{% endfor %}
+<hr>
+  <div class="w3-row-padding w3-section">
+  {% for object in widget.folder.files %}
+    <div class="col-md-3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src='/media/{{ object.file }}' style="width:100%" onclick="currentDiv({{ forloop.counter }})"/>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+{% endblock %}
