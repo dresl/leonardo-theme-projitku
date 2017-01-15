@@ -5,6 +5,7 @@ LEONARDO_APPS = [
 
 LEONARDO_JS_FILES = [
     'js/projitku.js',
+    'js/clipboard.min.js',
 ]
 
 LEONARDO_CSS_FILES = [
