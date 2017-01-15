@@ -21,7 +21,7 @@
       </div>
     </nav>
     {% if feincms_page.layout == "boxed" %}
-    <header class="bg-intro {% if 'co-je-to-za-nemoc' in request.path %}cjtznmc{% elif 'o-jitce' in request.path %}ojitce{% elif 'dekujeme' in request.path %}dekujeme{% endif %}">
+    <header class="bg-intro {% if 'co-je-to-za-nemoc' in request.path %}cjtznmc{% elif 'o-jitce' in request.path %}ojitce{% elif 'dekujeme' in request.path %}dekujeme{% endif %}" {% if request.path == '/' %}style="background-position: 0px!important"{% endif %}>
       <div class="intro-body">
         <div class="container">
           {% feincms_render_region feincms_page "toolbar" request %}
