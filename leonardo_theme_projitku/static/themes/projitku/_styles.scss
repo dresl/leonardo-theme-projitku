@@ -381,7 +381,7 @@ img::-moz-selection {
     text-align: center;
     background-color: black;
     background-position: center;
-    background-image: url("/static/img/pozadi2.jpg");
+    background-image: url("/static/img/uvodka_dark-v2.jpg");
     &.cjtznmc {
         background-image: none;
         background-color: #338DC9;
@@ -390,7 +390,7 @@ img::-moz-selection {
         background-image: url("/static/img/pozadi_o_jitce.JPG");
     }
     &.dekujeme {
-        background-image: url("/static/img/pozadi4b.jpg");
+        background-image: url("/static/img/pozadi_dekujeme.jpg");
     }
     background-attachment: fixed;
     .intro-body {
@@ -450,6 +450,15 @@ div.section-heading:hover {
     .img-responsive.image-header {
         margin-top: 12px!important;
     }
+    .bg-intro {
+        background-image: url("/static/img/uvodka_dark_mobile.jpg");
+        &.ojitce {
+        background-image: url("/static/img/pozadi_o_jitce_mobile.JPG");
+        }
+        &.dekujeme {
+            background-image: url("/static/img/pozadi_dekujeme_mobile.jpg");
+        }
+    }
     .toolbar-heading {
         font-family: Gadugib;
         color: white;
@@ -463,5 +472,11 @@ div.section-heading:hover {
     }
     .toolbar-text-responsive {
         font-size: 15px;
+    }
+    .container-fluid {
+        padding: 0;
+    }
+    .bg-gray {
+        background-image: none;
     }
 }

@@ -20,7 +20,6 @@
         {% feincms_render_region feincms_page "header" request %}
       </div>
     </nav>
-    {% if feincms_page.layout == "boxed" %}
     <header class="bg-intro {% if 'co-je-to-za-nemoc' in request.path %}cjtznmc{% elif 'o-jitce' in request.path %}ojitce{% elif 'dekujeme' in request.path %}dekujeme{% endif %}" {% if request.path == '/' %}style="background-position: 0px!important"{% endif %}>
       <div class="intro-body">
         <div class="container">
@@ -30,26 +29,10 @@
         </div>
       </div>
     </header>
+    <section class="container-fluid content-section text-center">
     {% feincms_render_region feincms_page "col3" request %}
     {% render_region_tools feincms_page "col3" request %}
-    {% else %}
-    <section class="container-fluid content-section text-center">
-      <div class="{{ feincms_page.get_layout_class }}">
-      <!-- <section class="col1 {% get_col_classes feincms_page 'col1' %}">
-        {% feincms_render_region feincms_page "col1" request %}
-        {% render_region_tools feincms_page "col1" request %}
-      </section> -->
-      <section class="col3 {% get_col_classes feincms_page 'col3' %}">
-          {% feincms_render_region feincms_page "col3" request %}
-          {% render_region_tools feincms_page "col3" request %}
-      </section>
-      <!-- <section class="col2 {% get_col_classes feincms_page 'col2' %}">
-        {% feincms_render_region feincms_page "col2" request %}
-        {% render_region_tools feincms_page "col2" request %}
-      </section> -->
-      </div>
-      {% endif %}
-    </div>
+    </section>
     <footer>
       <div class="container">
         {% feincms_render_region feincms_page "footer" request %}
