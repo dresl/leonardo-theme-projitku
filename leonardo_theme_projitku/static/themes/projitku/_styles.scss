@@ -169,10 +169,6 @@ h4 a {
     }
 }
 
-.content-section {
-    padding-top: 100px;
-}
-
 .btn {
     font-family: $font-default;
     font-weight: 400;
@@ -425,6 +421,10 @@ div.section-heading:hover {
     }
 }
 
+.container-fluid.content-section.text-center {
+    padding: 0!important;
+}
+
 .navbar-collapse {
     box-shadow: none;
 }
@@ -474,7 +474,7 @@ div.section-heading:hover {
         font-size: 15px;
     }
     .container-fluid {
-        padding: 0;
+        padding: 0!important;
     }
     .bg-gray {
         background-image: none;
